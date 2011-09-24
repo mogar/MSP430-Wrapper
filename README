@@ -1,0 +1,4 @@
+This project acts as a template for MSP430 sketches.
+
+Much of the behavior of the MSP430 (including dealing with registers) is hidden in Arduino-
+like wrapper functions.
