@@ -12,6 +12,7 @@ void pinMode(int pin, int mode) {
         P1DIR &= ~(1 << pin);
     } else if (mode == OUTPUT) {
         P1DIR |= 1 << pin;
+        P1OUT &= ~(1 << pin);
         ADC10AE0 &= ~ (1 << pin);
     } else if (mode == ANALOG) {
         ADC10AE0 |= 1 << pin;
