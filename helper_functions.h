@@ -27,4 +27,4 @@ void initADC(void);
 
 int analogRead(int pin);
 
-void analogWrite(int pin, int duty_cycle);
+void analogWrite2(int duty_cycle);

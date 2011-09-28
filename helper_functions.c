@@ -62,12 +62,14 @@ int analogRead(int pin) {
     }
 }
 
-void analogWrite(int pin, int duty_cycle) {
+void analogWrite2(int duty_cycle) {
+    //TODO: see if I can update this to use any pin
+    int pin = 2;
     pinMode(pin, OUTPUT);
     P1SEL |= 1 << pin;
     CCR0 = 512 - 1; //set PWM period
     CCTL1 = OUTMOD_7;                         // CCR1 reset/set
-    CCR1 = duty_cycle;                               // CCR1 PWM duty cycle
+    CCR1 = duty_cycle;                        // CCR1 PWM duty cycle
     TACTL = TASSEL_2 + MC_1;                  // SMCLK, up mode
     
 }
